@@ -65,10 +65,10 @@ export const Login = () => {
             ]}
             style={{margin:0}}
           >
-            <Input size="large" placeholder="name@example.com" maxLength={authValidation.login.emailMaxLength} />
+            <Input size="large" allowClear placeholder="name@example.com" maxLength={authValidation.login.emailMaxLength} />
           </Form.Item>
           <Form.Item label="비밀번호" name="password" rules={[{ required: true, message: '비밀번호를 입력해 주세요.' }]}>
-            <Input.Password size="large" placeholder="비밀번호" />
+            <Input.Password size="large" allowClear placeholder="비밀번호" />
           </Form.Item>
           <Button type="primary" size="large" htmlType="submit" block className="border border-slate-900 bg-slate-900 font-medium text-white shadow-sm hover:!border-slate-700 hover:!bg-slate-800">
             로그인

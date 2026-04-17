@@ -33,3 +33,9 @@
 - Keep the UI resilient when the API is unavailable.
 - Use clear loading, empty, and error states.
 - Match the architecture documented in `ARCHITECTURE.md`.
+
+### Input Rules
+- `Input`은 기본적으로 `allowClear`를 사용한다.
+- 단, 아래 경우는 제외한다:
+  - disabled 성격을 가질 때
+  
