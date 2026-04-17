@@ -1,0 +1,36 @@
+# build
+target/
+build/
+
+# logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# binaries
+*.class
+*.jar
+*.war
+*.dll
+*.exe
+
+# temp
+*.tmp
+
+# env
+.env
+application-secret.yml
+
+.jdks/
+target/
+node_modules/
+*.log
+*.dll
+*.exe
