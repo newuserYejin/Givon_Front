@@ -35,8 +35,8 @@ export const MyPage = () => {
   const user = meQuery.data ?? sessionUser
 
   return (
-    <div className="mx-auto max-w-3xl space-y-6">
-      <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] md:p-10">
+    <div className="mx-auto max-w-3xl flex flex-col gpa-6 gap-5">
+      <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] md:p-5 md:px-6">
         <div className="space-y-3">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">my page</div>
           <Typography.Title level={2} className="!mb-0 !text-slate-900">
@@ -49,7 +49,7 @@ export const MyPage = () => {
       </section>
 
       {meQuery.isLoading ? (
-        <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 24 } }}>
+        <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]">
           <div className="flex items-center gap-3 text-slate-600">
             <Spin />
             <span>사용자 정보를 불러오는 중입니다.</span>

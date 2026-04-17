@@ -8,12 +8,12 @@ export const AdminDashboard = () => {
   const { data } = useUsers()
 
   return (
-    <div className="space-y-6">
-      <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] md:p-10">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <div className="space-y-6 flex-1 flex flex-col min-w-[50%]">
+      <section className="rounded-[2rem] border border-slate-200 bg-white py-4 px-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] md:px-10 flex-1 flex flex-col justify-center">
+        <div className=" flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
             <div className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">admin dashboard</div>
-            <Typography.Title level={2} className="!mb-0 !text-slate-900">
+            <Typography.Title level={2} className="!mb-0 !text-slate-900]">
               관리 대시보드
             </Typography.Title>
             <p className="text-sm text-slate-600">
@@ -31,25 +31,40 @@ export const AdminDashboard = () => {
         </div>
       </section>
 
-      <Row gutter={[16, 16]}>
-        <Col xs={24} md={8}>
-          <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 20 } }}>
-            <Statistic title="총 사용자" value={data?.length ?? 0} />
+      <Row gutter={[16, 16]} className='flex-[2]'>
+        <Col md={8}>
+          <Card className="border h-full flex flex-col border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 20, height:"100%", display:"flex", flexDirection:"column" } }}>
+            <Statistic 
+              title="총 사용자" 
+              value={data?.length ?? 0}
+              style={{flex:1, display:"flex", flexDirection:"column"}}
+              valueStyle={{ display:"flex", alignItems:"center", justifyContent:"center", flex:1 }}
+            />
           </Card>
         </Col>
-        <Col xs={24} md={8}>
-          <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 20 } }}>
-            <Statistic title="대기 검토" value={4} />
+        <Col md={8}>
+          <Card className="border h-full flex flex-col border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 20, height:"100%", display:"flex", flexDirection:"column" } }}>
+            <Statistic
+              title="대기 검토"
+              value={4}
+              style={{flex:1, display:"flex", flexDirection:"column"}}
+              valueStyle={{ display:"flex", alignItems:"center", justifyContent:"center", flex:1 }}
+            />
           </Card>
         </Col>
-        <Col xs={24} md={8}>
-          <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 20 } }}>
-            <Statistic title="활성 메뉴" value={3} />
+        <Col md={8}>
+          <Card className="border h-full flex flex-col border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 20, height:"100%", display:"flex", flexDirection:"column" } }}>
+            <Statistic
+              title="활성 메뉴"
+              value={3}
+              style={{flex:1, display:"flex", flexDirection:"column"}}
+              valueStyle={{ display:"flex", alignItems:"center", justifyContent:"center", flex:1 }}  
+            />
           </Card>
         </Col>
       </Row>
 
-      <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 24 } }}>
+      <Card className="border flex-1 border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 24 } }}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-sm uppercase tracking-[0.2em] text-slate-500">admin actions</div>

@@ -10,7 +10,7 @@ export const Login = () => {
   const [form] = Form.useForm()
 
   return (
-    <div className="mx-auto max-w-md py-4 sm:py-8">
+    <div className="mx-auto max-w-md py-4 sm:py-8 md:w-[40%]">
       <Card className="border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.08)]" styles={{ body: { padding: 24 } }}>
         <div className="mb-8 space-y-3 text-center">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">welcome back</div>
@@ -63,6 +63,7 @@ export const Login = () => {
                 message: `이메일은 최대 ${authValidation.login.emailMaxLength}자까지 입력할 수 있습니다.`,
               },
             ]}
+            style={{margin:0}}
           >
             <Input size="large" placeholder="name@example.com" maxLength={authValidation.login.emailMaxLength} />
           </Form.Item>

@@ -78,7 +78,7 @@ export const PageShell = ({ children }: PageShellProps) => {
           </Tag>
         </div>
       </Layout.Header>
-      <Layout.Content className="relative mx-auto w-full max-w-7xl px-4 py-6 md:px-8 md:py-10">
+      <Layout.Content className="relative mx-auto w-full max-w-7xl px-4 py-6 md:px-8 md:py-5 flex flex-col items-center justify-center">
         {children}
       </Layout.Content>
     </Layout>

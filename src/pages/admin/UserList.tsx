@@ -39,7 +39,7 @@ export const UserList = () => {
   )
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col gap-6 max-w-full">
       <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] md:p-10">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="space-y-3">
@@ -71,7 +71,7 @@ export const UserList = () => {
         />
       ) : null}
 
-      <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 0 } }}>
+      <Card className="border border-slate-200 bg-white shadow-[0_14px_30px_rgba(15,23,42,0.06)]" styles={{ body: { padding: 0, overflow:"auto" } }}>
         <Table<User>
           rowKey={(record) => String(record.id)}
           columns={columns}

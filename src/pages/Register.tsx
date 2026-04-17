@@ -10,9 +10,9 @@ export const Register = () => {
   const [form] = Form.useForm()
 
   return (
-    <div className="mx-auto max-w-md py-4 sm:py-8">
-      <Card className="border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.08)]" styles={{ body: { padding: 24 } }}>
-        <div className="mb-8 space-y-3 text-center">
+    <div className="mx-auto max-w-md py-0 sm:py-0 flex-1">
+      <Card className="border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.08)]" styles={{ body: { paddingTop: 12, paddingBottom:12, paddingLeft : 24, paddingRight:24 } }}>
+        <div className="mb-2 space-y-1 text-center">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">join us</div>
           <Typography.Title level={2} className="!mb-0 !text-slate-900">
             회원가입
@@ -79,6 +79,8 @@ export const Register = () => {
                 message: `이름은 최대 ${authValidation.signup.nameMaxLength}자까지 입력할 수 있습니다.`,
               },
             ]}
+          
+            style={{margin:0}}
           >
             <Input size="large" placeholder="홍길동" maxLength={authValidation.signup.nameMaxLength} />
           </Form.Item>
